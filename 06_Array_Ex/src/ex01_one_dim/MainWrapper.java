@@ -108,23 +108,33 @@ public class MainWrapper {
     // 평균: 84.8점
     // 최대: 100점
     // 최소: 70점
+    String[] name = {"김", "이", "박", "최", "정"};
+    int top = 0;    // 1등의 인덱스  (변수 선언시 max에 score 배열의 0번 인덱스가 저장되어있기 때문에 0으로 값을 지정)
+    int bottom = 0; // 5등의 인덱스
     int[] score = {100, 70, 95, 83, 76};
     int total = score[0];  // 합계(평균을 구할 때 필요한 변수)
     int max = score[0];  // 최댓값
     int min = score[0];  // 최솟값
     
-    for(int i = 0; i < score.length; i++) {
+    //total = total + score[1]~score[4];  인덱스0번은 이미 total에 들어가있음
+    
+    for(int i = 1; i < score.length; i++) {
+      total += score[i];
       if(max < score[i]) {
         max = score[i];
+        top = i;         // 최대값의 인덱스 번호를 top에 저장
       } if (min > score[i]) {
         min = score[i];
+        bottom = i;     // 최솟값의 인덱스 번호를 bottom에 저장
       } 
     }
-    System.out.println("최댓값은" + max + "최소값은" + min);
+    System.out.println("평균 : " + (double)total / score.length + "점"); 
+    System.out.println("최대 : " + max + "점");
+    System.out.println("최소 : " + min + "점");
+    System.out.println("1등 : " + name[top]);   // 김
+    System.out.println("5등 : " + name[bottom]);   // 이
  
-    
-    
-  }
+}
     
   public static void main(String[] args) {
     
@@ -132,8 +142,8 @@ public class MainWrapper {
     //ex02();
     //ex03();  
     //ex04();
-    ex05(); 
-    //ex06(); 평균못구함
+    //ex05(); 
+    ex06(); 
   }
 
 }
