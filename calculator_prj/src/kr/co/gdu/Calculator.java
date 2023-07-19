@@ -1,4 +1,4 @@
-package ex03_class;
+package kr.co.gdu;
 // 클래스자바독(클래스 이름에 커서를 대면 설명이 나옴) 사용하는게 좋음!
 /** 
  * 
