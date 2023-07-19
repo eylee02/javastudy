@@ -31,6 +31,7 @@ public class AccCalculator {
    */
   public void addition(double a) {
     value += a;
+    System.out.println("+" + a + "=" + value);
   }
   /**
    * 
@@ -40,6 +41,7 @@ public class AccCalculator {
    */
   public void substraction(double a) {
     value -= a;
+    System.out.println("-" + a + "=" + value);
   }
   /**
    * 
@@ -49,6 +51,7 @@ public class AccCalculator {
    */
   public void multiplication(double a) {
     value *= a;
+    System.out.println("*" + a + "=" + value);
   }
   /**
    * 
@@ -58,8 +61,12 @@ public class AccCalculator {
    */
   public void division(double a) {
     value /= a;
+    System.out.println("/" + a + "=" + value);
   }
   
+  /**
+   * 필드 value를 출력하는 메소드
+   */
   public void showValue() {
     System.out.println(value);
   }
