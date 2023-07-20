@@ -70,12 +70,12 @@ public class BankAccount {
   
   
   // 세터 메소드
-  public void setBalance(long param) {
-    balance = param;
+  public void setBalance(long balacnce) {
+    this.balance = balacnce;
   }
   
-  public void setAccNo(String param) {
-    accNo = param;
+  public void setAccNo(String accNo) {
+    this.accNo = accNo;
   }
   
   //게터 메소드

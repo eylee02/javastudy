@@ -25,16 +25,16 @@ public class Watch {
   private int second;
   
   // Setter
-  public void setHour(int param) {
-    hour = param;
+  public void setHour(int hour) {
+    this.hour = hour;
   }
   
-  public void setMinute(int param) {
-    minute = param;
+  public void setMinute(int minute) {
+    this.minute = minute;
   }
   
-  public void setSecond(int param) {
-    second = param;
+  public void setSecond(int second) {
+    this.second = second;
   }
   
   //Getter
@@ -70,8 +70,12 @@ public class Watch {
    * @param param 증가시킬 분 정보
    */
   public void addMinute(int param) {
-
-    
+    if(param <= 0) {
+      return;
+    }
+    minute += param;
+    addHour(minute / 60);
+    minute %= 60;
   }
   /**
    * 필드 second에 파라미터 param을 더하는 메소드<br>
@@ -80,7 +84,12 @@ public class Watch {
    * @param param 증가시킬 초 정보
    */ 
   public void addSecond(int param) {
-    
+    if(param <= 0) {
+      return;
+    }
+    second += param;
+    addMinute(second / 60);
+    second %= 60;
   }
 
 }
