@@ -4,13 +4,17 @@ public class MainWrapper {
 
   public static void main(String[] args) {
     
-    User u = new User();    // User클래스를 객체선언
     
-    u.setId("admin");       // User클래스의 setId 메소드에 값입력
-    System.out.println(u.getId());  // getId 메소드 리턴값으로 출력
+    // User 객체(객체명 u) 생성
+    User u = new User();    
     
-   u.setAge(30); 
-   System.out.println(u.getAge());
+    // User 객체에 데이터 저장
+    u.setId("admin");                
+    u.setAge(30); 
+    
+    // User 객체의 데이터 확인
+    System.out.println(u.getId());  
+    System.out.println(u.getAge());
   }
 
 }
