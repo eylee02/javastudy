@@ -36,6 +36,12 @@ public class Customer {
    */
   public void buy(Bakery bakery, int count, int money) {
     
+    // 고객이 가진 돈보다 더 많은 돈을 내려고 한다.
+    if(this.money < money) {
+      System.out.println("구매 불가합니다.(가진 돈이 부족하다.)");
+      return;
+    }
+    
     // bakery에 count, money를 전달하고 빵과 잔돈을 받는다.
     BreadChange bc = bakery.sell(count, money);
     

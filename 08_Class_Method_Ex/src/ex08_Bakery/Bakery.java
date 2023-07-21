@@ -36,6 +36,12 @@ public class Bakery {
       return null;
     }
     
+    // 잔돈이 부족하다.
+    if(this.money < money - count * PRICE) {
+      System.out.println("판매 불가합니다.(잔돈이 부족하다.)");
+      return null;
+    }
+    
     // 고객이 돈을 안냈다.
     if(money <= 0) {
       System.out.println("판매 불가합니다.(돈을 안 냈다.)");
