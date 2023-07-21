@@ -8,8 +8,8 @@ public class MainWrapper {
     // 클래스이름을 타입으로 작성
     Calculator myCalc;
     
-    // Calculator 객체 생성
-    myCalc = new Calculator();
+    // Calculator 객체 생성 (객체 == 인스턴스)
+    myCalc = new Calculator();  // 인스턴스화 : 메모리에 로드되었다.
     
     // 계산하고자 하는 실수 2개
     double a = 1.5;
