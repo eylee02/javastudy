@@ -10,6 +10,19 @@ public class Bank {
     this.tel = tel;
   }
   
+  public Bank() {    
+  }
+  
+  public void setName(String name) {
+    this.name = name;
+  }
+  
+  // Setter
+  public void setTel(String tel) {
+    this.tel = tel;
+  }
+ 
+  // Getter
   public String getName() {
     return name;
   }
