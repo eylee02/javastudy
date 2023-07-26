@@ -11,7 +11,5 @@ public class Box<T> {  // T는 String
   public void setItem(T item) {
     this.item = item;
   }
-  
-  
-
+    
 }
