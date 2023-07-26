@@ -50,11 +50,35 @@ public class MainWrapper {
     final double PI = 3.141592;
     System.out.println(PI);
     
+    // reference type : 참조타입
+    //
+    //       ┌--------------┐
+    //   name│  0x12345678  │
+    //       │--------------│
+    //       │      ...     │
+    //       │--------------│
+    //       │      tom     │0x12345678
+    //       │--------------│
+    //       │      ...     │
+    //       └--------------┘
+    //
+    
     // reference type : 참조타입  --name변수에 tom 이름이 들어있는게 아님,name에는 tom의 주소값이 저장되어 출력되는것
     String name = "tom";
     System.out.println(name);
     
     
   }
+  
+  /*
+   * primitive type → reference type
+   * 
+   * boolean        →  Boolean
+   * char           →  Character
+   * byte           →  Byte
+   * int            →  Integer
+   * long           →  Long
+   * double         →  Double
+   */
    
 }
