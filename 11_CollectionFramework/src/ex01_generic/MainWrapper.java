@@ -17,7 +17,7 @@ public class MainWrapper {
     box2.setItem(10);
     System.out.println(box2.getItem());
     
-    // Person을 저장하는 box3
+    // Person(클래스타입)을 저장하는 box3
     Box<Person> box3 = new Box<Person>();
     box3.setItem(new Person("고길동"));
     System.out.println(box3.getItem());        

@@ -1,6 +1,6 @@
 package ex01_generic;
 
-public class Box<T> {  // T는 String
+public class Box<T> {  // T는 String타입
   
   private T item;
 
