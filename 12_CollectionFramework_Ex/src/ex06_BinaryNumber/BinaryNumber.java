@@ -17,13 +17,13 @@ public class BinaryNumber {
     // binary.get(4) : 0
     // binary.get(5) : 1
     this.number = number;
-    binary = new ArrayList<Integer>();
-    if(number == 0) {
+    binary = new ArrayList<Integer>();  // binary필드값 배열선언&생성
+    if(number == 0) { 
       binary.add(0);      
     } else {
     while(number > 0) {
-      binary.add(number % 2);
-      number /= 2;
+      binary.add(number % 2); // binary 배열에 2로나눈 나머지값을 차례로 입력
+      number /= 2;  
     }
     }
   }
@@ -33,7 +33,7 @@ public class BinaryNumber {
   @Override
   public String toString() {
     String result = "";
-    for(int i = binary.size() - 1; i >= 0; i--) {
+    for(int i = binary.size() - 1; i >= 0; i--) {  // 출력된 값을 맨뒤부터 차례로 출력
       result += binary.get(i);
     }
     return result;
