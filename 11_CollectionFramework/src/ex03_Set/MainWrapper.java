@@ -30,7 +30,7 @@ public class MainWrapper {
     season.add("봄");
     
     // 전체 확인
-    System.out.println(season);
+    System.out.println(season);  // 봄,여름,가을,겨울
     
     
   }
@@ -98,6 +98,7 @@ public class MainWrapper {
     // Set은 동일한 값이면 한번만 저장
     Person p1 = new Person("홍길동" , 30);
     Person p2 = new Person("홍길동" , 30);
+
     
     // HashSet 선언 & 생성
     Set<Person> people = new HashSet<Person>();
@@ -105,6 +106,7 @@ public class MainWrapper {
     // 요소 추가
     people.add(p1);
     people.add(p2);
+ 
     
     // 확인
     System.out.println(people);
@@ -120,7 +122,7 @@ public class MainWrapper {
     // ArrayList 선언 & 생성
     List<Integer> numbers1 = Arrays.asList(1, 2, 3, 4, 5);
     List<Integer> numbers2 = Arrays.asList(6, 7, 3, 4, 5);
-    
+ 
     // ArrayList를 이용해서 HashSet 생성
     Set<Integer> set1 = new HashSet<Integer>(numbers1);
     Set<Integer> set2 = new HashSet<Integer>(numbers2);
@@ -171,9 +173,9 @@ public class MainWrapper {
     //ex01();
     //ex02();
     //ex03();
-    ex04();
+    //ex04();
     //ex05();
-    //ex06();
+    ex06();
     //ex07();
   }
 
