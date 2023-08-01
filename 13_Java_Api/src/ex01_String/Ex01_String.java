@@ -98,7 +98,7 @@ public class Ex01_String {
   
   public static void ex05() {
     
-    // length 메소드 : 문자열의 길이(글자루)를 반환
+    // length 메소드 : 문자열의 길이(글자수)를 반환
     
     String name = "Tom cruise\n";
     

@@ -1,5 +1,7 @@
 package ex04_Scanner;
 
+import java.util.Scanner;
+
 public class MainWrapper {
 
   public static void main(String[] args) {
@@ -17,6 +19,27 @@ public class MainWrapper {
      *      (2) 공백 있는 문자열 : nextLine()
      * 4. 사용자 입력을 위해서 사용해야 하는 입력 스트림(InputStream)은 System.in이다.
      */
+    
+    // Scanner 객체 선언 & 생성
+    Scanner sc = new Scanner(System.in);
+    
+    // String 입력
+    System.out.println("이름을 입력하세요.");
+    String name = sc.next();  // 이름에 공백이 없어야 한다.
+    System.out.println("입력된 이름 : " + name);
+    
+    System.out.println("나이를 입력하세요.");
+    int age = sc.nextInt();
+    System.out.println("입력된 나이 : " + age);
+    
+    System.out.println("키를 입력하세요.");
+    double height = sc.nextDouble();
+    System.out.println("입력된 키 : " + height);
+    
+    // 사용한 입력 스트림 종료(생략 가능하다.)
+    sc.close();
+    
+    
 
   }
 
