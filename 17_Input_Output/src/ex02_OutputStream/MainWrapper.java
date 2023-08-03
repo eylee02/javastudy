@@ -35,7 +35,10 @@ public class MainWrapper {
     
     try {
       
-     //파일출력스트림 생성 (반드시 예외 처리가 필요한 코드)
+     // 파일출력스트림 생성 (반드시 예외 처리가 필요한 코드)
+      
+     // 1. 생성모드 : 언제나 새로 만든다.(덮어쓰기)       new FileOutputStream(file)
+     // 2. 추가모드 : 새로 만들거나,기존 파일에 추가한다. new FileOutputStream(file, true)
     fout = new FileOutputStream(file);
     
     // 출력할 데이터 (파일로 보낼 데이터)
@@ -46,6 +49,7 @@ public class MainWrapper {
     // 출력(파일로 데이터 보내기)
     fout.write(c);
     fout.write(b);
+    System.out.println(file.getPath() + " 파일 크기 : " + file.length() + "바이트" );
     
     } catch(IOException e) {
       e.printStackTrace();
@@ -59,7 +63,6 @@ public class MainWrapper {
       }
     }
     
-    System.out.println(file.getPath() + " 파일 크기 : " + file.length() + "바이트" );
     
   }
   
@@ -81,6 +84,7 @@ public class MainWrapper {
       byte[] b = s.getBytes("UTF-8");
       
       fout.write(b);
+      System.out.println(file.getPath() + "파일 크기: " + file.length() + "바이트");
       
     } catch (IOException e) {
       e.printStackTrace();
@@ -92,7 +96,6 @@ public class MainWrapper {
       } catch(IOException e) {
         e.printStackTrace();
       }
-      System.out.println(file.getPath() + "파일 크기: " + file.length() + "바이트");
     }   
   }
   
@@ -125,6 +128,7 @@ public class MainWrapper {
       bout.write(s1.getBytes("UTF-8"));  // byte 배열을 따로 만들지않고 데이터보내기에서 처리
       bout.write(s2.getBytes("UTF-8"));
       //bout.write(s2.getBytes(StandardCharsets.UTF-8));  getBytes("UTF-8")과 동일하다.
+      System.out.println(file.getPath() + "파일 크기 : " + file.length() + "바이트");
       
     } catch(IOException e) {
       e.printStackTrace();
@@ -136,7 +140,6 @@ public class MainWrapper {
       } catch(IOException e) {
         e.printStackTrace();
       }
-      System.out.println(file.getPath() + "파일 크기 : " + file.length() + "바이트");
     }
     
   }
@@ -167,10 +170,11 @@ public class MainWrapper {
       double height = 180.5;
       String school = "가산대학교";
            
-      dout.writeChars(name);
+      dout.writeChars(name);    // "t", "o", "m"
       dout.writeInt(age);
       dout.writeDouble(height);
       dout.writeUTF(school);    // 한글처리
+      System.out.println(file.getPath() + "파일 크기 : " + file.length() + "바이트");
       
     } catch(IOException e) {
       e.printStackTrace();
@@ -182,7 +186,6 @@ public class MainWrapper {
       } catch(IOException e) {
         e.printStackTrace();
       }
-      System.out.println(file.getPath() + "파일 크기 : " + file.length() + "바이트");
     }
 
   }
@@ -215,6 +218,7 @@ public class MainWrapper {
       Student student = new Student(name, age, height, school);
            
       oout.writeObject(student);
+      System.out.println(file.getPath() + "파일 크기 : " + file.length() + "바이트");
       
     } catch(IOException e) {
       e.printStackTrace();
@@ -226,7 +230,6 @@ public class MainWrapper {
       } catch(IOException e) {
         e.printStackTrace();
       }
-      System.out.println(file.getPath() + "파일 크기 : " + file.length() + "바이트");
     }
     
     
