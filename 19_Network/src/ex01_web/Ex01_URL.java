@@ -12,7 +12,7 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 
-public class MainWrapper {
+public class Ex01_URL {
   
   public static void ex01() {
     

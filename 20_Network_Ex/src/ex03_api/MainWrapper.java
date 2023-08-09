@@ -36,7 +36,7 @@ public class MainWrapper {
       String serviceKey = "oXa+yD8nNtGWcFWQgAA2Znfnyjk3hrwZw481fzKowtJRkhQT923OAPk6KoEbzLdPv9u7Z/EU4tl7hWAfOZtUaQ==";
       String pageNo = "1";
       String numOfRows = "10";
-      String addr = "전라남도 나주시 빛가람동 120";
+      //String addr = "전라남도 나주시 빛가람동 120";
       
       StringBuilder sb = new StringBuilder();
       sb.append(spec);
