@@ -1,0 +1,30 @@
+HTML 
+  JavaScript : <tag>
+  DOM
+  Document
+  Object
+  Model
+
+xml 분석방법 2가지
+org.json  수업시간에 사용
+Document 
+  Node
+   Element
+
+
+
+서비스유형 REST
+주소창을 이용하여 데이터를 전달
+보안에문제가있을수있음
+인코딩키를이용하여 접근
+디코딩키를 인코딩하여사용도가능
+
+response 응답
+
+서버로보낼때
+request 요청
+
+call back URL
+최초 url을받고 인증을받은뒤 다시 접속하는 url
+
+주소창에 ?가 있으면 GET방식
